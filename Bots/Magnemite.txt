@@ -1,0 +1,4 @@
+/me uses Explosion!
+/me uses Thunder on {{user}}!
+/me uses Magnet Bomb on {{user}}!
+/me uses Supersonic on {{user}}!
