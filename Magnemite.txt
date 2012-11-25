@@ -1,4 +1,3 @@
-Hello {{user}}!
 {{user}} you fucking suck.
 Please go away, {{user}}.
 I LOVE DICKS AND {{USER}}!
