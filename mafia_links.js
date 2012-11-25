@@ -2,6 +2,7 @@
 /*global say, mafiathemes*/
 
 module.exports = {
+	init: function() { },
 	links: function(playname, playmessage, channel) {
 		if (playmessage.indexOf("[[") < playmessage.indexOf("]]")) {
 				var b = playmessage.split("[[")[1].split("]]")[0].toLowerCase();
