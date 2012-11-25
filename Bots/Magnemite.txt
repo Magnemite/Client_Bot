@@ -1,3 +1,0 @@
-/me uses Explosion on {{user}}!
-/me uses Thunder on {{user}}!
-/me uses Magnet Bomb on {{user}}!
