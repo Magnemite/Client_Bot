@@ -34,7 +34,7 @@ module.exports = {
 					say("Theme Critique/Improvement: http://pokemon-online.eu/forums/forumdisplay.php?114-Theme-Critique-and-Improvement", channel);
 					return true;
 				}
-				if (b == "mafia review" || b == "mafia review thread") {
+				if (b == "mafia tutoring" || b == "mafia tutoring thread") {
 					say("Mafia Tutoring: http://pokemon-online.eu/forums/showthread.php?16801-Mafia-Tutoring-Sign-up-to-be-tutored!", channel);
 					return true;
 				}
