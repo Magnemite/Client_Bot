@@ -10,4 +10,4 @@ You're too slow!
 Haiiii!
 Show me your moves!
 你好！
-{{user}}， 你明白中文吗?
+{{user}}， 你懂中文吗?
