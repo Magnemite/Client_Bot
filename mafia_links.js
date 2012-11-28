@@ -14,7 +14,7 @@ module.exports = {
 					say("Mafia Theme Guide: http://pokemon-online.eu/forums/showthread.php?9793-How-To-Make-Mafia-Themes-(v2.0)", channel)
 					return true;
 				}
-				if (b == "mafia documentation" || b == "theme documentation" || b == "mafia theme documentation") {
+				if (b == "mafia documentation" || b == "theme documentation" || b == "mafia theme documentation" || b == "mafia documentation thread") {
 					say("Mafia Theme Documentation: http://pokemon-online.eu/forums/showthread.php?15833-Mafia-Theme-Documentation", channel)
 					return true;
 				}
