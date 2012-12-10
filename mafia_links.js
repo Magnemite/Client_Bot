@@ -3,7 +3,7 @@
 
 module.exports = {
 	init: function() { },
-	links: function(playname, playmessage, channel, command) {
+	links: function(playname, playmessage, channel) {
 		if (playmessage.indexOf("[[") < playmessage.indexOf("]]")) {
 				var b = playmessage.split("[[")[1].split("]]")[0].toLowerCase();
 				if (b == "mafia theme checker" || b == "theme checker") {
@@ -43,7 +43,7 @@ module.exports = {
 					return true;
 				}
 			}
-		if (Bot.isDirector(playname) && command == "updatethemes") {
+		if (Bot.isDirector(playname) && playmessage.toLowerCase().indexOf("updatethemes") > -1) {
 			say("/themeinfo", "Mafia")
 			say("Mafia theme links were updated!", channel)
 			return true;
