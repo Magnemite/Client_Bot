@@ -43,7 +43,7 @@ module.exports = {
 					return true;
 				}
 			}
-		if (Bot.isDirector(playname) && playmessage.substring(0, 22).toLowerCase() == "magnemite updatehemes") {
+		if (Bot.isDirector(playname) && playmessage.substring(0, 22).toLowerCase() == "magnemite updatethemes") {
 			say("/themeinfo", "Mafia")
 			say("Mafia theme links were updated!", channel)
 			return true;
