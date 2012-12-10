@@ -1,5 +1,5 @@
 ﻿/* mafia_links.js */
-/*global say, mafiathemes*/
+/*global say, mafiathemes, Bot*/
 
 module.exports = {
 	init: function() { },
@@ -43,9 +43,9 @@ module.exports = {
 					return true;
 				}
 			}
-		if (playname.toLowerCase() == "pokeworldbw" && playmessage.indexOf("updatethemes") > -1) {
+		if (Bot.isDirector(playname) && playmessage.split(" ")[1].toLowerCase() == "updatethemes") {
 			say("/themeinfo", "Mafia")
-			say("Mafia theme links were updated!", "PokeWorldBW", true)
+			say("Mafia theme links were updated!", channel)
 			return true;
 		}
 	}
