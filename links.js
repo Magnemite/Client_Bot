@@ -56,7 +56,7 @@ module.exports = {
 				var pokemon = (params.length > 1 ? sys.pokemon(sys.pokeNum(params[0])) : sys.pokemon(sys.pokeNum(res)));
 				var pokeNum = sys.pokeNum(pokemon);
 				if (pokeNum.toString().length < 3) {
-					pokeNum = (pokeNum.length == 1 ? "00"+i : "0"+i);
+					pokeNum = (pokeNum.toString().length == 1 ? "00"+pokeNum : "0"+pokeNum);
 				}
 				var Send = [];
 				if (shiny) Send.push("Shiny ");
