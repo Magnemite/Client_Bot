@@ -6,6 +6,7 @@ module.exports = {
 	message: function(playname, playmessage, channel) {
 		if (playmessage.indexOf("[[") < playmessage.indexOf("]]")) {
 				var res = playmessage.split("[[")[1].split("]]")[0].toLowerCase();
+				var params = res.split(":");
 				if (res == "mafia theme checker" || res == "theme checker") {
 					say("Mafia Theme Checker: http://icekirby.github.com/PO-stuff/mafiachecker/", channel);
 					return true;
@@ -42,11 +43,31 @@ module.exports = {
 					say(mafiathemes[res].name + ": " + mafiathemes[res].link, channel);
 					return true;
 				}
+				if (sys.pokeNum(res) !== undefined || sys.pokeNum(params[0]) !== undefined) {
+					var shiny, back;
+					for (var i=1; i<params.length; i++) {
+						var parameter = params[i].toLowerCase();
+						if (parameter == "shiny")
+							shiny = true;
+						if (parameter == "back")
+							back = true;
+					}
+					var pokemon = (params.length > 1 ? sys.pokemon(sys.pokeNum(params[0])) : sys.pokemon(sys.pokeNum(res)));
+					var pokeNum = sys.pokeNum(pokemon);
+					if (pokeNum.length < 3) {
+						pokeNum = (pokeNum.length == 1 ? "00"+i : "0"+i);
+					}
+					var Send = [];
+					if (shiny) Send.push("Shiny ");
+					Send.push(pokemon);
+					if (back) Send.push("'s back sprite");
+					Send.push(": http://pokemon-online.eu/images/pokemon/black-white/animated/");
+					if (back) Send.push("back/");
+					if (shiny) Send.push("shiny/");
+					Send.push(sys.pokeNum(pokemon) + ".gif");
+					say(Send.join(""), channel);
+					return true;
+				}
 			}
-		if (typeof Bot.isDirector == "function" && Bot.isDirector(playname) && playmessage.substring(0, 22).toLowerCase() == "magnemite updatethemes") {
-			say("/themeinfo", "Mafia")
-			say("Mafia theme links were updated!", channel);
-			return true;
-		}
 	}
 };
