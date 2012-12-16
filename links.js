@@ -65,7 +65,7 @@ module.exports = {
 				Send.push(": http://pokemon-online.eu/images/pokemon/black-white/animated/");
 				if (back) Send.push("back/");
 				if (shiny) Send.push("shiny/");
-				Send.push(sys.pokeNum(pokemon) + ".gif");
+				Send.push(pokeNum + ".gif");
 				say(Send.join(""), channel);
 				return true;
 			}
