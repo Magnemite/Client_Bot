@@ -1,5 +1,5 @@
-﻿/* mafia_links.js */
-/*global say, mafiathemes, Bot*/
+﻿/* links.js for Magnemite */
+/*global say, mafiathemes*/
 
 module.exports = {
 	init: function() { },
@@ -55,7 +55,7 @@ module.exports = {
 				}
 				var pokemon = (params.length > 1 ? sys.pokemon(sys.pokeNum(params[0])) : sys.pokemon(sys.pokeNum(res)));
 				var pokeNum = sys.pokeNum(pokemon);
-				if (pokeNum.length < 3) {
+				if (pokeNum.toString().length < 3) {
 					pokeNum = (pokeNum.length == 1 ? "00"+i : "0"+i);
 				}
 				var Send = [];
