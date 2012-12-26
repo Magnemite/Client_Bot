@@ -1,1 +1,2 @@
-Hello {{user}}, welcome to The Dock! We hope you enjoy your stay :)
+Hello {{user}}, welcome to The Dock! We hope you enjoy your stay. :)
+Hello {{user}}, welcome to The Dock! We hope you enjoy your stay. ^_^

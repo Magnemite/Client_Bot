@@ -1,0 +1,3 @@
+Sorry {{user}}, but you are not authorized to use that command!
+Dream lower, {{user}}!
+Sorry {{user}}, but that command is for higher intelligence!
