@@ -54,7 +54,7 @@ module.exports = {
 						back = true;
 				}
 				var pokemon = (params.length > 1 ? sys.pokemon(sys.pokeNum(params[0])) : sys.pokemon(sys.pokeNum(res)));
-				var pokeNum = utilities.formPokeFormNum(sys.pokeNum(pokemon));
+				var pokeNum = utilities.pokeFormNum(sys.pokeNum(pokemon));
 				if (pokeNum.toString().length < 3) {
 					pokeNum = (pokeNum.toString().length == 1 ? "00"+pokeNum : "0"+pokeNum);
 				}
