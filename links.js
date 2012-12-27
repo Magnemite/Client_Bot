@@ -1,8 +1,20 @@
-﻿/* links.js for Magnemite */
-/* global say, mafiathemes, utilities*/
+﻿/*****************************************
+* links.js for PokeWorldBW's bot
+* Global variables are mafiathemes, say
+*****************************************/
 
 module.exports = {
 	init: function() { },
+	pokeFormNum: function(num) {
+		if (num <= 649) 
+			return num;
+		for (var i=1; i<=27; i++) {
+			var n = num - 65536*i;
+			if (n <= 649)
+				return n + "-" + i;
+		}
+		return num;
+	},
 	message: function(playname, playmessage, channel) {
 		if (playmessage.indexOf("[[") < playmessage.indexOf("]]")) {
 			var res = playmessage.split("[[")[1].split("]]")[0].toLowerCase();
@@ -54,7 +66,7 @@ module.exports = {
 						back = true;
 				}
 				var pokemon = (params.length > 1 ? sys.pokemon(sys.pokeNum(params[0])) : sys.pokemon(sys.pokeNum(res)));
-				var pokeNum = utilities.pokeFormNum(sys.pokeNum(pokemon));
+				var pokeNum = this.pokeFormNum(sys.pokeNum(pokemon));
 				if (pokeNum.toString().length < 3) {
 					pokeNum = (pokeNum.toString().length == 1 ? "00"+pokeNum : "0"+pokeNum);
 				}
