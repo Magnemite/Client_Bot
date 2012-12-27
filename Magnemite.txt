@@ -11,3 +11,6 @@ Haiiii!
 Show me your moves!
 你好！
 {{user}}， 你懂中文吗?
+{{user}} lights up my world like nobody else!
+Fall into {{user}}'s arms instead!
+{{user}}'s got that one thing!
